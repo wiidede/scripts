@@ -34,10 +34,5 @@ export default defineConfig(
       name: getEntryName(file),
       banner: chunk => extractUserScriptHeader(chunk.moduleIds[0]),
     },
-    hooks: {
-      'build:done': async (chunk) => {
-        console.warn(`${JSON.stringify(chunk)}`)
-      },
-    },
   })),
 )
