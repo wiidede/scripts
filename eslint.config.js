@@ -5,5 +5,8 @@ export default antfu(
   {
     type: 'lib',
     pnpm: true,
+    rules: {
+      'e18e/ban-dependencies': 'off',
+    },
   },
 )
