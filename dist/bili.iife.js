@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         wiidede-B站工具
 // @namespace    wiidede.space
-// @version      1.2.1
+// @version      1.2.2
 // @description  bilibili工具：自动宽屏，倍速控制, 快捷键操作
 // @author       wiidede
 // @license      MIT
