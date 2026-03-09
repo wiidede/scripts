@@ -7,6 +7,7 @@
 // @license      MIT
 // @match        https://www.bilibili.com/video/*
 // @match        https://www.bilibili.com/list/watchlater/*
+// @match        https://www.bilibili.com/bangumi/play/*
 // @icon         https://www.bilibili.com/favicon.ico
 // @grant        GM_setValue
 // @grant        GM_getValue

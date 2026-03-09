@@ -1,12 +1,13 @@
 // ==UserScript==
 // @name         wiidede-B站工具
 // @namespace    wiidede.space
-// @version      1.2
+// @version      1.2.1
 // @description  bilibili工具：自动宽屏，倍速控制, 快捷键操作
 // @author       wiidede
 // @license      MIT
 // @match        https://www.bilibili.com/video/*
 // @match        https://www.bilibili.com/list/watchlater/*
+// @match        https://www.bilibili.com/bangumi/play/*
 // @icon         https://www.bilibili.com/favicon.ico
 // @grant        GM_setValue
 // @grant        GM_getValue
