@@ -1,9 +1,10 @@
 // ==UserScript==
 // @name         wiidede-B站工具
 // @namespace    wiidede.space
-// @version      1.2
-// @description  bilibili工具：自动宽屏，倍速控制
+// @version      1.2.1
+// @description  bilibili工具：自动宽屏，倍速控制, 快捷键操作
 // @author       wiidede
+// @license      MIT
 // @match        https://www.bilibili.com/video/*
 // @match        https://www.bilibili.com/list/watchlater/*
 // @icon         https://www.bilibili.com/favicon.ico
@@ -252,11 +253,6 @@ function handleShortcutClick(event: KeyboardEvent): boolean {
 
 // 键盘快捷键处理
 function handleKeyPress(event: KeyboardEvent): void {
-  // 先处理配置的快捷键点击
-  if (handleShortcutClick(event)) {
-    return
-  }
-
   const activeElement = document.activeElement as HTMLElement | null
   const isInputFocused = activeElement
     && (activeElement.tagName === 'INPUT'
@@ -264,6 +260,10 @@ function handleKeyPress(event: KeyboardEvent): void {
       || activeElement.isContentEditable)
   if (isInputFocused)
     return
+
+  if (handleShortcutClick(event)) {
+    return
+  }
 
   if (!event.ctrlKey && !event.altKey && !event.metaKey && event.location === 0) {
     switch (event.key.toLowerCase()) {

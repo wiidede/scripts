@@ -2,8 +2,9 @@
 // @name         wiidede-B站工具
 // @namespace    wiidede.space
 // @version      1.2
-// @description  bilibili工具：自动宽屏，倍速控制
+// @description  bilibili工具：自动宽屏，倍速控制, 快捷键操作
 // @author       wiidede
+// @license      MIT
 // @match        https://www.bilibili.com/video/*
 // @match        https://www.bilibili.com/list/watchlater/*
 // @icon         https://www.bilibili.com/favicon.ico
@@ -13,6 +14,7 @@
 // ==/UserScript==
 (function() {
 	//#region src/bili.ts
+	// @license      MIT
 	function log(...args) {
 		console.log("[wiidede-B站工具]: ", ...args);
 	}
@@ -184,9 +186,9 @@
 		return false;
 	}
 	function handleKeyPress(event) {
-		if (handleShortcutClick(event)) return;
 		const activeElement = document.activeElement;
 		if (activeElement && (activeElement.tagName === "INPUT" || activeElement.tagName === "TEXTAREA" || activeElement.isContentEditable)) return;
+		if (handleShortcutClick(event)) return;
 		if (!event.ctrlKey && !event.altKey && !event.metaKey && event.location === 0) switch (event.key.toLowerCase()) {
 			case "z":
 				log("按下了Z键 - 重置倍速");
