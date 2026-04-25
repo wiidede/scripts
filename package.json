@@ -13,7 +13,7 @@
     "dev": "tsdown --watch",
     "lint": "eslint",
     "prepublishOnly": "pnpm build",
-    "release": "tsx scripts/bump-version.ts && git add src/ && git commit -m \"chore: bump userscript versions\" && pnpm build && bumpp",
+    "release": "tsx scripts/bump-version.ts && pnpm build && git add src/ dist/ && git commit -m \"chore: bump userscript versions\" && bumpp",
     "test": "vitest",
     "typecheck": "tsc",
     "prepare": "simple-git-hooks"
