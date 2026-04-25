@@ -179,6 +179,7 @@
 			const metaMatch = !config.ctrlKey && !config.altKey && !config.shiftKey ? !event.metaKey : true;
 			if (keyMatch && ctrlMatch && altMatch && shiftMatch && metaMatch) {
 				event.preventDefault();
+				event.stopPropagation();
 				log(`按下了${config.ctrlKey ? "Ctrl+" : ""}${config.altKey ? "Alt+" : ""}${config.shiftKey ? "Shift+" : ""}${config.key} - ${config.description}`);
 				clickElementBySelector(config.selector, config.description);
 				return true;
