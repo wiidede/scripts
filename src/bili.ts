@@ -368,3 +368,5 @@ if (document.readyState === 'loading') {
 else {
   setTimeout(init)
 }
+
+export {}
